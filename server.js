@@ -13,7 +13,6 @@ dotenv.config();
 
 const allowedOrigins = ["https://samshan-frontend.vercel.app"];
 
-// Set up CORS middleware
 app.use(
   cors({
     origin: (origin, callback) => {
