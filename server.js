@@ -13,14 +13,14 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://samshan-backend.vercel.app:3000",
     credentials: true,
   })
 );
 
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://samshan-backend.vercel.app:3000",
     credentials: true,
   },
 });
