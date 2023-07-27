@@ -1,9 +1,11 @@
 {
   "development": {
+    "url": "mysql://root:GUxRoy13lIjHLOeoEDGJ@containers-us-west-128.railway.app:6743/railway",
     "username": "root",
-    "password": "",
-    "database": "samshan",
-    "host": "localhost",
+    "password": "GUxRoy13lIjHLOeoEDGJ",
+    "database": "railway",
+    "host": "containers-us-west-128.railway.app",
+    "port": "6743",
     "dialect": "mysql"
   },
   "test": {
