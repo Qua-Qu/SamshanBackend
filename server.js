@@ -11,10 +11,18 @@ const httpServer = require("http").createServer(app);
 
 dotenv.config();
 
+const allowedOrigins = ['https://samshan-frontend.vercel.app'];
+
+// Set up CORS middleware
 app.use(
   cors({
-    origin: "https://samshan-frontend.vercel.app",
-    credentials: true,
+    origin: (origin, callback) => {
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
   })
 );
 
