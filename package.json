@@ -1,0 +1,46 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Herman-Dwi-Yulianto/backend-samshan-shop.git"
+  },
+  "author": "qq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Herman-Dwi-Yulianto/backend-samshan-shop/issues"
+  },
+  "homepage": "https://github.com/Herman-Dwi-Yulianto/backend-samshan-shop#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "feather-icons": "^4.29.0",
+    "googleapis": "^122.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.2.4",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.32.1",
+    "sequelize-cli": "^6.6.1",
+    "socket.io": "^4.7.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/node": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/register": "^7.22.5"
+  }
+}
