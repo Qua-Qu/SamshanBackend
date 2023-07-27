@@ -11,7 +11,7 @@ const httpServer = require("http").createServer(app);
 
 dotenv.config();
 
-const allowedOrigins = ['https://samshan-frontend.vercel.app:3000'];
+const allowedOrigins = ["https://samshan-frontend.vercel.app:3000"];
 
 // Set up CORS middleware
 app.use(
