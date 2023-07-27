@@ -2,9 +2,8 @@
   "development": {
     "url": "mysql://root:GUxRoy13lIjHLOeoEDGJ@containers-us-west-128.railway.app:6743/railway",
     "dialect": "mysql"
-  }
-}
-,
+  },
+  
   "test": {
     "username": "root",
     "password": null,
