@@ -13,14 +13,14 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "https://samshanbackend.railway.internal:3000",
+    origin: "https://samshanbackend-production.up.railway.app:3000",
     credentials: true,
   })
 );
 
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: "https://samshanbackend.railway.internal:3000",
+    origin: "https://samshanbackend-production.up.railway.app:3000",
     credentials: true,
   },
 });
