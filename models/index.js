@@ -9,33 +9,9 @@ const basename = path.basename(__filename)
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
-let sequelize;
-if (process.env.USE_ENV_VARIABLE) {
-  const connectionString = process.env[process.env.USE_ENV_VARIABLE];
-  sequelize = new Sequelize(connectionString, {
-    dialect: 'mysql', // or any other database dialect you are using
-    dialectOptions: {
-      ssl: {
-        rejectUnauthorized: false, // Required if using a MySQL database on Railway with SSL enabled
-      },
-    },
-  });
-} else {
-  const config = {
-    database: process.env.DB_NAME,
-    username: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    dialect: 'mysql', // or any other database dialect you are using
-    dialectOptions: {
-      ssl: {
-        rejectUnauthorized: false, // Required if using a MySQL database on Railway with SSL enabled
-      },
-    },
-  };
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'mysql',
+});
 
 fs
   .readdirSync(__dirname)
