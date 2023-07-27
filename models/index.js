@@ -6,12 +6,15 @@ const Sequelize = require('sequelize');
 const process = require('process');
 const env = process.env.NODE_ENV || 'development';
 const basename = path.basename(__filename)
-const config = require(__dirname + '../../config/config.json');
+const config = require(__dirname + '../config/config.json')[env];
 const db = {};
 
-const sequelize = new Sequelize(config.development.url, {
+const sequelize = new Sequelize(config[process.env.NODE_ENV].url, {
   dialect: 'mysql',
 });
+
+module.exports = sequelize;
+
 
 fs
   .readdirSync(__dirname)
