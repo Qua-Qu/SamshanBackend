@@ -9,11 +9,11 @@ const basename = path.basename(__filename)
 const config = require(__dirname + '/config.json')[env];
 const db = {};
 
-const sequelize = new Sequelize(config[process.env.NODE_ENV].url, {
-  dialect: 'mysql',
-});
-
-module.exports = sequelize;
+if (config[env].use_env_variable) {
+  sequelize = new Sequelize(process.env[config[env].use_env_variable], config[env]);
+} else {
+  sequelize = new Sequelize(config[env].database, config[env].username, config[env].password, config[env]);
+}
 
 
 fs
