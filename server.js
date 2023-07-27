@@ -11,23 +11,16 @@ const httpServer = require("http").createServer(app);
 
 dotenv.config();
 
-const allowedOrigins = ["https://samshan-frontend.vercel.app"];
-
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
+    origin: "https://samshan-frontend.vercel.app:3000",
+    credentials: true,
   })
 );
 
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: "https://samshan-frontend.vercel.app",
+    origin: "https://samshan-frontend.vercel.app:3000",
     credentials: true,
   },
 });
