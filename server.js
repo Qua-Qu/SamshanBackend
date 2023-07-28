@@ -20,7 +20,8 @@ app.use(
 
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://samshan-frontend.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
 });
