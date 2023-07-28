@@ -2,10 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const { sequelize } = require("./models");
-const rootRouter = require("../routers");
+const rootRouter = require("./routers");
 const cookieParser = require("cookie-parser");
 const path = require("path");
-const { createMess } = require("../services/messenger");
+const { createMess } = require("./services/messenger");
 const app = express();
 const httpServer = require("http").createServer(app);
 
