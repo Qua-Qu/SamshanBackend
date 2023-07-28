@@ -6,12 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "build": "npm i"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Herman-Dwi-Yulianto/backend-samshan-shop.git"
+    "url": "git+https://github.com/Qua-Qu/SamshanBackend.git"
   },
   "author": "qq",
   "license": "ISC",
@@ -20,7 +19,6 @@
   },
   "homepage": "https://github.com/Herman-Dwi-Yulianto/backend-samshan-shop#readme",
   "dependencies": {
-    "@vercel/postgres": "^0.4.1",
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
@@ -35,7 +33,6 @@
     "mysql2": "^3.2.4",
     "nodemailer": "^6.9.3",
     "nodemon": "^2.0.22",
-    "pg": "^8.11.1",
     "sequelize": "^6.32.1",
     "sequelize-cli": "^6.6.1",
     "socket.io": "^4.7.1"
